@@ -9,7 +9,6 @@ namespace Lands.Infrastructure
     {
         #region Properties
         public MainViewModel Main { get; set; }
-
         #endregion
 
         #region Constructor
@@ -17,7 +16,6 @@ namespace Lands.Infrastructure
         {
             this.Main = new MainViewModel();
         }
-
         #endregion
     }
 }

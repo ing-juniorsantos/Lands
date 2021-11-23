@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lands.Views;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -151,13 +152,15 @@ namespace Lands.ViewModels
                 return;    
             }
 
-            await Application.Current.MainPage.DisplayAlert("Excelente", "Excelente", "Aceptar");
-
             this.IsRunning = false;
             this.IsEnabled = true;
 
             this.Email = string.Empty;
             this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Lands = new LandsViewModel();
+
+            Application.Current.MainPage = new NavigationPage(new LandsPage());
         }
         #endregion
     }
